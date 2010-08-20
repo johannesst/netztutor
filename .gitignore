@@ -1,0 +1,45 @@
+# backup files
+*~
+*.~ml
+#documentation
+*.pdf
+!./etc/doc/bilder/
+./etc/vp-uml/.vpp~*
+./etc/vp-uml/.vpprefdata/
+*.dvi
+*.vpp~*
+
+#recorded data
+*.data
+*.dat
+
+#matlab files
+*.mat
+
+#emacs tmp
+*.prv
+_region_.*
+
+#latex tmp
+*.aux
+*.out
+*.log
+*.toc
+*.glo
+*.gls
+*.lof
+*.lot
+*.acn
+*.glg
+*.ist
+*.dvi
+*.xdy
+
+#diverse
+*.swp
+*.pyc
+*.pkl
+*.xml
+
+#pida
+*.pidaproject
