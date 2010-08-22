@@ -1,24 +1,39 @@
 
 \subsection{Electronic Mail}
-
+%auf thunderbird umschreiben!
 Der Loginname des Benutzerservers bildet den ersten Teil der \glossar
 E-Mail--Adresse, welche dann folgenderma"sen aussieht:
 \url{loginname@schunter.etc.tu-bs.de}
 Um die Merkbarkeit zu vereinfachen, wird au"serdem ein Mail--Alias der Form
 \url{Vorname.Nachname@schunter.etc.tu-bs.de} eingerichtet. Umlaute werden zu
-ae, oe, ue usw. 
+ae, oe, ue usw.  Standardmäßig werden die Emails an die bei der
+Anmeldung angegbene Emailadresse gesendet. Möchte man diese Adresse
+ändern, ist die Datei \texttt{.forward} auf den Benutzerserver zu bearbeiten.
+Möchte man den Zugang über das SchunterNet nutzen, ist sie zu entfernen.
+Mehr Informationen zum Arbeiten auf den Benutzerserver unter
+\ref{benutzerserver} auf \pageref{benutzerserver}.\\\\
+Zum Senden und Empfangen von E-Mail im SchunterNet sind nach Entfernen
+der \texttt{.forward} noch einige Einstellungen notwendig. Dazu geht man z.B. unter
+Thunderbird wie folgt vor:
 
-Zum Senden und Empfangen von E-Mail im SchunterNet sind z.B. unter Netscape
-folgende Einstellungen notwendig:
+\fbox{Bearbeiten} $\Rightarrow$ \fbox{Einstellungen} $\Rightarrow$
+\fbox{Konten} $\Rightarrow$ \fbox{Konto hinzufügen:} $\Rightarrow$
+\mbox{E-Mail-Konto} $\Rightarrow$ \fbox{E-Mail-Adresse}
+\mbox{\url{Vorname.Nachname@schunternet.de}} $\Rightarrow$ \fbox{POP|IMAP}
+$\Rightarrow$ \fbox{Posteingang-Server}
+\mbox{\url{pop.schunter.etc.tu-bs.de | imap.schunter.etc.tu-bs.de}}
+$\Rightarrow$ \fbox{Postausgang-Server (SMTP)}
+\mbox{\url{mail.schunter.etc.tu-bs.de}} $\Rightarrow$ \fbox{Benutzername}
+\mbox{\url{loginname@schunter.etc.tu-bs.de}}\\
+ Ob man POP oder IMAP wählt, ist im Prinzip egal, der Unterschied ist,
+dass bei IMAP alle Emails auf den Server bleiben, inklusive der
+Ordnerstruktur. Auf diese kann dann auch via Webmail unter
+\url{https://www.schunter.etc.tu-bs.de/squirrelmail} zugreifen. 
+Nun muss man noch eine Kontobezeichnung wählen und auf ,,Fertig
+stellen'' klicken. Danach kann dann das Emailprogramm genutzt werden.
+Bei anderen Emailprogrammen ist die Einrichtung ähnlich. 
+Zur Sicherheit bei Email sieh auch noch \ref{viren} und \ref{passwort}.
 
-\fbox{Bearbeiten} $\Rightarrow$ \fbox{Einstellungen} $\Rightarrow$ \fbox{Mail
-  \& Diskussionsforen} $\Rightarrow$ \mbox{Mail--Server:} $\Rightarrow$
-  \mbox{Server f"ur eingehende Mail:} \url{pop.schunter.etc.tu-bs.de}
-
-Unter \fbox{Bearbeiten\dots} kann der Benutzername und das Pa"swort
-gespeichert werden (siehe dazu auch \ref{viren} und \ref{passwort}).
-
-Server f"ur ausgehende Mail: \url{mail.schunter.etc.tu-bs.de}
 
 \subsubsection*{Wie komme ich an meine E-Mail in der Uni?}
 
