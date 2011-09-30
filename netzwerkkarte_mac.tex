@@ -1,0 +1,82 @@
+
+\subsection{Netzwerkkarte und MAC--Adresse}
+In jedem Zimmer befindet sich eine Anschlussdose. Sie befindet sich
+meistens in Nähe der Steckdosen und sieht wie folgt aus:
+
+%\bf{FIX ME: Bild einer typischen Netzwerkdose einfügen :D}
+
+\rm Zum Anschluss ist ein Netzwerkadapter (Ethernet--Karte) mit RJ45--Buch\-se und
+ein Anschlusskabel (Twisted Pair, RJ45, \textbf{nicht} crossed over) der
+ben"otigten L"ange erforderlich. Ein entsprechender Adapter ist in den
+gängigen Computern heutzutage fest verbaut. Das dazugehörige Kabel
+kann, wenn nicht schon vorhanden, in der Sprechstunde des Vereins zum
+Selbstkostenpreis erworben werden.
+%Die
+%Bandbreite der Netzkarte bzw.\  der Netzanbindung kann 10~MBit/s (10BaseT) oder 100~MBit/s (100BaseT) betragen. Macs haben seit 1999 10/100BaseT Ethernet eingebaut, das gilt auch
+%f"ur iMacs/iBooks/PowerBooks.
+
+Jede Ethernet--Karte bzw.\ --Chip hat eine weltweit eindeutige Hardware--(oder
+\glossar MAC--)Adresse, die fest in der Karte eingestellt ist. Bei "alteren
+Ethernet--Karten ist sie auf einen der Chips aufgeklebt, bei neueren
+erf"ahrt man sie entweder aus der mitgelieferten Dokumentation, oder
+durch ein Service--Programm.%, welches auf der mitgelieferten Diskette
+%zu finden ist. Dazu wird der Rechner im MS--DOS--Mode gestartet (echtes DOS ist
+%wichtig, also keine MS--DOS--Eingabeaufforderung oder DOS--Box unter Windows!)
+%und das Programm \verb#A:\setup# aufgerufen. Unter "`View
+%Configuration"' steht die Hardwareadresse (6 Byte, hexadezimal, jeweils durch
+%Doppelpunkt getrennt).
+Die Adresse kann z.B. so aussehen: \texttt{00:12:6b:9f:20:cc}
+Je nach Betriebssystem gibt es mehrere Möglichkeiten, die MAC-Adresse
+herauszufinden.
+
+% %\subsubsection*{Windows 95/98/NT}
+% \textbf{FIXME: Kann das raus? Oder gibts da noch welche?}\\
+% Benutzer von Windows 95/98 haben  eine weitere recht einfache
+% M"oglichkeit. Das Programm winipcfg.exe im Windows--Verzeichnis (meist
+% \verb#C:\WINDOWS#) zeigt Informationen "uber den Netzwerkanschluss
+% an, unter anderem auch die Hardwareadresse. Wichtig ist hierbei, da"s im
+% entsprechenden Auswahlfeld die Ethernet-Netzwerkkarte angew"ahlt ist (die
+% PPP-Adresse 44:45:53:54:00:00 ist \textbf{nicht} die gesuchte)
+% Unter Windows NT findet sich das dazu n"otige Programm im Startmen"u unter
+% Programme/Verwaltung (Allgemein)/Windows NT-Diagnose. Hier steht die
+% MAC-Adresse auf der Seite "`Netzwerk"' und da "uber den Button "`Transporte"'.
+
+\subsubsection*{Windows XP}
+Unter Windows XP wählt man den Punkt Startmenü. Anschließend wählt man
+den Menüpunkt ,,Ausführen'' und tippt dadrin \texttt{cmd} ein. In die sich
+nun öffnende Eingabeaufforderung gibt man den Befehl \texttt{ipconfig /all}
+ein.
+
+ %Illustrierende Bilder
+%\textbf{FIXME: Bilder sagen mehr als tausend worte}
+
+\subsubsection*{Windows Vista/ 7}
+
+\textbf{FIXME: Bilder sagen mehr als tausend worte}
+
+
+\subsubsection*{Mac OS}
+
+% In einer Sprechstunde sah ich, wie eine Benutzerin die MAC über den
+% Apple System Profiler herausfand, würde das gerne mal anhand des
+% Minis nachvollziehen und fotografisch aufbereiten :)
+Unter MacOS X kann die MAC-Adresse mit den ,,Apple System Profiler''
+ermittelt werden: %screenshot mini
+Unter älteren Systemen (Mac OS 9.22 und dessen Vorgänger) kann 
+die MAC--Adresse ermittelt werden, indem man das
+Kontrollfeld "`TCP/IP"' aufruft und dessen INFO-Button anw"ahlt. Die hier
+angegebene "`Hardware Adresse"' ist die MAC--Adresse. Alternativ kann die
+MAC--Adresse auch mit dem "`Apple System Profiler"' im Apple--Men"u ermittelt
+werden. 
+
+\textbf{FIXME: Bilder sagen mehr als tausend worte}
+
+\subsubsection*{Unix/Linux}
+Zunächst öffnet man ein Terminal. Dadrin gibt man dann den Befehl 
+. Unter
+\glossar UNIX/Linux öffnet man zunächst ein Terminal. Dort gibt man
+dann den Befehl \texttt{ifconfig} ein. Unter Umständen muss der
+absolute Pfad \texttt{ifconfig} benutzt werden. Die Ausgabe könnte so
+aussehen: %insert screenshot mit englischer und deutscher Form!
+
+\textbf{FIXME: Bilder sagen mehr als tausend worte}

@@ -1,0 +1,143 @@
+
+\subsection{Benutzerserver (\texttt{jupiter.schunter.etc.tu-bs.de})}
+\label{benutzerserver}
+\subsubsection{Zugriff auf das Homedirectory}
+
+Wie so oft gibt es auch hier mehrere M"oglichkeiten: 
+
+\paragraph{\dots\ per ftp (File Transfer Protocol)} \ \\
+Mit einem beliebigen \glossar ftp--Programm k"onnen Dateien in das
+\glossar Home--Directory eingespielt werden. Auch die meisten anderen
+Dateioperationen wie L"oschen, Verzeichnisse anlegen usw.\  k"onnen im
+allgemeinen mit solchen Programmen durchgef"uhrt werden.
+
+Beim Einlogproze"s m"ussen Benutzerkennung und Pa"swort angegeben werden, ein
+Zugriff auf die \glossar Home--Directorys per anonymous--ftp ist nicht
+m"oglich. Außerdem ist ftp nicht gerade das sicherste Verfahren, da
+alle Passwörter in Klartext übertragen werden. Deswegen empfehlen wir
+die Verwendung des deutlich sichereren scp/sftp-Protokolls.
+% Aus diesem Grund ist der Netscape Navigator f"ur diese Zugriffsart
+%nicht so gut geeignet.
+\paragraph{\dots\ per sftp/scp} \ \\
+Die Vorgehensweise ist hier ähnlich wie unter ftp, aber mit den
+Vorteil, dass alle Verbindungen verschlüsselt werden. Unter
+Unix-Systemen inklusive Mac OS X, sind in der Regel sftp und scp für
+die Konsole schon vorhanden. Die gängigen Desktops (Gnome/Kde) haben
+meistens schon einen graphischen Client direkt integriert, womit sich
+der Zugang über \url{sftp:/login@jupiter.schunter.etc.tu-bs.de/}
+herstellen lässt. Danach nur noch Passwort eintippen und man ist
+verbunden. Je nach verwenden System kann die Url auch
+\url{scp:/login@jupiter.schunter.etc.tu-bs.de/} oder
+\url{ssh:/login@jupiter.schunter.etc.tu-bs.de/} lauten. 
+Für Windows empfiehlt sich als Client das kostenlose Programm WinSCP
+und für Mac OS X gibt es unter anderen Cyberduck. 
+
+\paragraph{\dots\ durch Einloggen auf dem Server} \ \\ 
+Mit ssh  kann man sich direkt auf dem \glossar Server (Name: "`jupiter.schunter.etc.tu-bs.de"')
+einloggen und in einer \glossar UNIX--Shell--Umgebung (bash) arbeiten. Als
+Texteditoren stehen z.B. vi (bzw.\  vim, elvis) und joe sowie emacs zur
+Verf"ugung. Allerdings wollen wir aus Sicherheitsgründen diese
+Funktionalität bald einschränken, dass neue Benutzer zunächst sich nur
+via scp/sftp verbinden können. Auf Anfrage wird man allerdings einen
+vollwertigen Zugriff erreichen können
+
+%scheint derzeit nicht zu gehen, aber der samba server läuft noch starjoha
+%\subsubsection{\dots\ per SMB--Mount} 
+
+% F"ur Windows--Benutzer ist diese Variante vermutlich die komfortabelste
+% Zugriffsm"oglichkeit. Dies funktioniert folgenderma"sen:
+
+% \begin{sloppypar}
+% Unter \fbox{Systemsteuerung} $\Rightarrow$ \fbox{Netzwerk} wird "uber
+% \fbox{Hinzuf"ugen\dots} $\Rightarrow$ \fbox{Dienst} "`Datei und
+% Druckerfreigabe f"ur Windows--Netzwerke"' installiert, falls dies nicht schon
+% zuvor geschehen ist. Dann kann mit dem Windows--Explorer "uber \fbox{Extras}
+% $\Rightarrow$ \fbox{Netzlaufwerk verbinden} mit der Angabe
+% "`\url{\\jupiter\<username>}"' das \glossar Homedirectory auf einen neuen
+% Laufwerksbuchstaben abgebildet werden. Es ist sinnvoll, die Option
+% "`Verbindung beim Start wiederherstellen"' zu aktivieren. Das Pa"swort ist in
+% diesem Fall das Server--Pa"swort. Der Datei- und Druckerfreigabedienst kann
+% "ubrigens sp"ater wieder entfernt werden. Wenn er allerdings nie installiert
+% wurde, klappt auch der \glossar SMB--Zugriff auf fremde Laufwerke nicht (eine
+% Windows--Kuriosit"at).
+% \end{sloppypar}
+
+% Auch f"ur Linux--Benutzer besteht die M"oglichkeit, mit Hilfe von
+% \path{smbmount} diese Zugriffsmethode zu benutzen. Ein Nachteil dabei ist, da"s
+% normalerweise bei jedem Mount--Vorgang das Pa"swort eingegeben werden muss. Man
+% kann sich zwar leicht ein Skript schreiben, das diese Aufgabe "ubernimmt, aber
+% dann muss man auch das Pa"swort im Klartext in dem Skript unterbringen, was eine
+% potentielle Sicherheitsl"ucke darstellt. 
+
+% gibt net mehr starjoha
+% \subsubsection{\dots\ per NFS--Mount}
+
+% F"ur Linux und alle anderen \glossar UNIX--Varianten ist dies die richtige
+% L"osung. Da sie im Wohnheim relativ selten genutzt wird, ist eine Freigabe des
+% \glossar Home--Directorys per \glossar NFS nicht initial f"ur alle Benutzer
+% eingerichtet. Wer hiervon Gebrauch machen m"ochte, sollte eine kurze Mitteilung
+% an \url{admin@jupiter} mit Angabe des Loginnamens und der eigenen IP--Adresse
+% schicken.
+
+% Ein Tip: Wer sein Server--Home--Directory in den Home--Directory--Bereich eines
+% normalen Benutzers auf der eigenen Maschine mounten m"ochte, sollte daf"ur
+% sorgen, da"s die UID und GID auf beiden Rechnern "ubereinstimmen. Das vermeidet
+% Probleme mit File--Permissions. 
+
+
+\subsubsection{Private Homepages}
+
+Jeder Benutzer kann in seinem HOME--Bereich auf dem Benutzerserver ein
+Unterverzeichnis mit dem Namen \path{public_html} anlegen (auf  
+\url{jupiter.schunter.etc.tu-bs.de} sollte dieses bereits existieren), das der
+\glossar WWW-Server als Do\-ku\-men\-ten--Verzeichnis f"ur pers"onliche \glossar
+WWW--Seiten interpretiert. Eine dort liegende Datei mit dem Namen
+\path{index.html} wird als \glossar Homepage interpretiert (alternativ ist
+auch \path{index.htm} m"oglich). Der URL dieser \glossar Homepage besteht aus
+dem Namen des \glossar WWW-Servers, dem Tilde-Zeichen (\verb#~#) und dem Login
+des Benutzers (Beispiel: \url{http://www.schunter.etc.tu-bs.de/~user/}). Es
+sollte euch bewusst sein, da"s dieses Verzeichnis mittels \glossar WWW-Server
+weltweit eingesehen werden kann.
+
+Das Erzeugen eines Unterverzeichnisses \path{public_html} geht (unter Linux)
+so:
+\begin{itemize}
+  \item Einloggen auf \url{jupiter.schunter.etc.tu-bs.de} mittels Kommando:
+    \texttt{telnet jupiter} oder: \verb#ftp jupiter# und anschlie"sender
+    \glossar Authentifizierung
+  \item Kommando: \verb#mkdir ~/public_html# zur Erzeugung des
+    Unterverzeichnisses, in dem die \glossar WWW--Seiten liegen sollen 
+  \item Kommando: \verb#chmod 755 ~/public_html#, damit jedermann (!)
+    dieses Verzeichnis lesen kann
+  \item Kommando: \verb#chmod 711 ~#, damit jedermann ein vorhandenes
+    Verzeichnis im HOME--Bereich finden kann
+\end{itemize}
+
+Das Verzeichnis kann aber auch vom PC unter Windows per \glossar ftp
+oder sftp mit
+graphischer Oberfl"ache angelegt werden, z.B. mit WS\underline{\ \
+}FTP oder WinSCP. Auch
+dazu m"usst ihr euch auf \url{jupiter} einloggen. Ein Verzeichnis k"onnt ihr dort
+per Knopfdruck anlegen.
+
+Legt im Verzeichnis \path{public_html} eine Datei mit dem Namen
+\path{index.html} an (absoluter Pfad:
+\path{~/public_html/index.html}). Diese Datei findet man mit dem URL:
+\url{http://www.schunter.etc.tu-bs.de/~/user/}
+
+Nat"urlich m"ussen auch alle Dateien in diesem Verzeichnis zum Lesen freigegeben
+werden:
+\begin{itemize}
+  \item Kommando: \verb#chmod 644 ~/public_html/*#
+\end{itemize}
+
+Zus"atzlich kann im selben Verzeichnis (\path{~/public_html/}) eine Datei
+\path{description.txt} mit einer kurzen Beschreibung des Inhalts der \glossar
+Homepage (eine Zeile, maximal 50 Zeichen) angelegt werden.
+% Diese wird dann auf
+%der "Ubersichtsseite der privaten \glossar Homepages im SchunterNet mit angezeigt.
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "../Netzeinfuehrung"
+%%% End: 

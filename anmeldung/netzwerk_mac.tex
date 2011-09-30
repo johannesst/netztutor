@@ -1,0 +1,80 @@
+
+\subsection{Netzwerkkarte und MAC--Adresse}
+\label{sec:netzw-und-mac}
+In jedem Zimmer befindet sich eine Anschlussdose, in Haus 3 "uber der Pinwand
+neben der Kofferklappe. In Haus 1 und Haus 2 findet man die Dose bei
+den anderen Steckdosen. 
+\rm Zum Anschluss ist ein Netzwerkadapter (Ethernet--Karte) mit RJ45--Buch\-se und
+ein Anschlusskabel (Twisted Pair, RJ45, \textbf{nicht} crossed over) der
+ben"otigten L"ange erforderlich. Es  kann, falls nicht schon
+vorhanden, in der \glossar Sprechstunder des SchunterNet erworben werden.
+Die Bandbreite der Netzkarte bzw.\  der Netzanbindung kann 10~MBit/s (10BaseT) oder 100~MBit/s (100BaseT) betragen. Macs haben seit 1999 10/100BaseT Ethernet eingebaut, das gilt auch
+f"ur iMacs/iBooks/PowerBooks.
+
+Jede Ethernet--Karte bzw.\ --Chip hat eine weltweit eindeutige Hardware--(oder
+\glossar MAC--)Adresse, die fest in der Karte eingestellt ist. Bei "alteren
+Ethernet--Karten ist sie auf einen der Chips aufgeklebt, bei neueren
+erf"ahrt man sie entweder aus der mitgelieferten Dokumentation, oder
+durch ein Service--Programm.%, welches auf der mitgelieferten Diskette
+%zu finden ist. Dazu wird der Rechner im MS--DOS--Mode gestartet (echtes DOS ist
+%wichtig, also keine MS--DOS--Eingabeaufforderung oder DOS--Box unter Windows!)
+%und das Programm \verb#A:\setup# aufgerufen. Unter "`View
+%Configuration"' steht die Hardwareadresse (6 Byte, hexadezimal, jeweils durch
+%Doppelpunkt getrennt).
+Die Adresse kann z.B. so aussehen: \texttt{00:12:6b:9f:20:cc}
+Je nach Betriebssystem gibt es mehrere Möglichkeiten, die MAC-Adresse
+herauszufinden.
+\newpage
+\subsubsection*{Windows XP}
+
+Unter Windows XP wählt man \fbox{Startmenü} $\Rightarrow$
+\fbox{Ausführen}.  In das sich öffnende Fenster tippt man  \texttt{cmd}
+ein und bestätigt dies durch einen Klick auf \fbox{Ok}:
+\centergraphics{cmd_xp}
+ In die sich
+nun öffnende Eingabeaufforderung gibt man den Befehl \texttt{ipconfig /all}
+ein: %Illustrierende Bilder
+\centergraphics{mac_xp}
+Nun muss man aufpassen, dass man nicht die falsche MAC-Adresse, z.B
+der WLAN-Karte erwischt. Gesucht wird die der Ethernetkarte. Im
+Screenshot wäre dies zum Beispiel der \\texttt{,,Ethernetadapter LAN-Verbindung
+2''}. Die MAC-Adresse selbst verbirgt sich hinter der psysikalischen
+Adresse, hier also: \texttt{,,0B-00-27-FC-09-51''}.
+\subsubsection*{Windows Vista/7}
+
+% Leute wegen Screenshots nerven
+% ggf. in der Uni machen?
+\subsubsection*{Mac OS}
+% dito
+% In einer \glossar Sprechstunde sah ich, wie eine Benutzerin die MAC über den
+% Apple System Profiler herausfand, würde das gerne mal anhand des
+% Minis nachvollziehen und fotografisch aufbereiten :)
+Unter MacOS X kann die MAC-Adresse mit den ,,Apple System Profiler''
+ermittelt werden: %screenshot mini
+Unter älteren Systemen (Mac OS 9.22 und dessen Vorgänger) kann 
+die MAC--Adresse ermittelt werden, indem man das
+Kontrollfeld "`TCP/IP"' aufruft und dessen INFO-Button anw"ahlt. Die hier
+angegebene "`Hardware Adresse"' ist die MAC--Adresse. Alternativ kann die
+MAC--Adresse auch mit dem "`Apple System Profiler"' im Apple--Men"u ermittelt
+werden. 
+\newpage
+\subsubsection*{Unix/Linux}
+\small{Vorbemerkung: Je nach Distribution kann es kleinere Unterschiede
+geben. Die folgende Anleitung wurde für Debian und Ubuntu getestet und
+sollte sich leicht an andere Distributionen anpassen lassen.} Unter
+\glossar UNIX/Linux öffnet man zunächst ein Terminal. Dort gibt man
+dann den Befehl \texttt{ifconfig} ein. Unter Umständen muss der
+absolute Pfad \texttt{ifconfig} benutzt werden. Die Ausgabe könnte so
+aussehen: %insert screenshot mit englischer und deutscher Form!
+\centergraphics{mac_linux}
+Aufpassen muss man nun, dass man nicht die falsche MAC-Adresse
+notiert, z.B. von der WLAN-Karte.
+Gesucht ist die MAC-Adresse der Ethernetkarte. Diese fängt zumeist mit
+,,eth'' an, hier also ,,eth1''.  Davon ist nun die MAC-Adresse
+gesucht, auch ,,HWAddr'' oder ,,Hardwareadresse'' genannt, hier
+also: \texttt{,, 00:15:58:ce:53:14''}. 
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "../Netzeinfuehrung"
+%%% End: 

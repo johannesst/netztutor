@@ -1,0 +1,104 @@
+
+\subsection{Pa"sw"orter}
+\label{passwort}
+
+\subsubsection*{Wie "andere ich das Pa"swort?}
+
+Um das Pa"swort zu "andern, muss zun"achst ein Terminalprogramm gestartet werden,
+z.B. \glossar ssh. Als Zieladresse wird der Rechner jupiter angegeben
+(IP--Adresse ist 134.169.168.3, falls der \glossar DNS--Server nicht benutzt
+werden kann). Man erh"alt dann folgende (oder "ahnliche) Begr"u"sungsmeldung: 
+
+\begin{verbatim}
+Login:
+Password: 
+\end{verbatim}
+Es folgt die Eingabe der Benutzerkennung und des (alten) Pa"sworts. Bei der
+Eingabe des Pa"sworts erfolgt kein Echo auf dem Bildschirm, auch nicht
+symbolisch (z.B. durch *). Danach erscheint folgende (oder eine "ahnliche)
+Meldung:
+\begin{verbatim}
+Linux jupiter.schunter.etc.tu-bs.de 2.6.32-jupiter #1 SMP Sat Dec 12 00:42:27 CET 2009 x86_64
+
+Willkommen auf dem neuen Jupiter !
+
+Wichtigste Neuerung : Die Mails werden fortan im Maildir-Format
+abgelegt, siehe Maildir/ Ordner im Homeverzeichnis.
+
+Last login: Thu Mar 20 15:30:06 on ttyp1 from erde.schunter.et
+No mail.
+loginname@jupiter:/home/users/loginname >
+\end{verbatim}
+
+Man befindet sich nun in einer \glossar UNIX--Shell--Umgebung. Zum "Andern des
+Pa"sworts reicht es, das Kommando \verb#kpasswd# zu kennen. Nach dessen Aufruf
+wird man zun"achst nach dem alten, und dann zweimal nach dem neuen Pa"swort
+gefragt. Falls bei der Frage nach dem neuen Pa"swort zwei unterschiedliche
+Zeichenketten angegeben wurden (Tippfehler), erscheint die Meldung
+
+\verb#They don't match; try again.#
+
+und man darf noch mal ein neues Pa"swort angeben (wiederum zweimal). Wichtig:
+In der \glossar UNIX--Welt wird grunds"atzlich zwischen Gro"s- und
+Kleinschreibung unterschieden, also auch beim Pa"swort. Wenn alles geklappt
+hat, kann man die Umgebung mit dem Kommando \verb#exit# wieder verlassen. Auf
+spezielle deutsche Sonderzeichen (Umlaute und Esszett) sollte beim Pa"swort
+verzichtet werden. Auch wenn die \glossar UNIX--Anmeldung und das \glossar
+E-Mail abholen noch klappt, so gibt es doch sp"atestens bei \glossar
+SMB--Zugriffen (\glossar Homedirectory abbilden, Drucken "ubers Netz)
+Schwierigkeiten.
+
+% Das Terminalprogramm \glossar telnet geh"ort zum Lieferumfang von s"amtlichen
+% \glossar UNIX--Clones, Windows95/98 und Windows NT. F"ur andere Betriebssysteme
+% muss es gegebenenfalls noch nachinstalliert werden. Prinzipiell kann man auch
+% jedes andere Terminalprogramm verwenden, das eine DEC--vt100 Terminalemulation
+% beherrscht.
+
+\subsubsection*{Wie sicher ist das Pa"swort? Wie sicher sollte es sein?}
+
+Die Sicherheit des Pa"sworts sollte nicht untersch"atzt werden. Erstens sind
+manche Pa"sw"orter leichter zu knacken als andere, und zweitens kann mit einem
+geklauten oder geknackten Pa"swort weitaus mehr Unfug getrieben werden als nur
+fremde \glossar E-Mails zu lesen.
+
+Wer eine Vorstellung davon bekommen m"ochte, wozu ein unbefugter Zugang
+mi"sbraucht werden kann, dem sei das Buch "`Kuckucksei"' von Clifford Stoll
+empfohlen. Es handelt sich dabei "ubrigens nicht um ein Informatik--Fachbuch,
+sondern um einen tatsachenbasierten Roman. Man erf"ahrt auf sehr humorvolle und
+auch f"ur Laien verst"andliche Weise, wie Computersysteme angegriffen und
+mi"sbraucht werden k"onnen. 
+
+Das Pa"swort sollte also m"oglichst schwer zu knacken sein. Gegen systematische
+alphabetische Angriffe (Ausprobieren aller Kombinationen aller verf"ugbaren
+Zeichen) ist im Grunde kein Kraut gewachsen. Allerdings ist der Zeitaufwand
+derart hoch, da"s diese Angriffsart kaum praktikabel ist. Die
+Wahrscheinlichkeit, das richtige Pa"swort zu erwischen, ist geringer als die,
+da"s das Pa"swort inzwischen ge"andert wurde. H"aufiger sind dagegen die
+sogenannten W"orterbuchattacken, bei denen nur solche Pa"sw"orter ausprobiert
+werden, die auch sinnvolle W"orter ergeben, wie sie eben in W"orterb"uchern einer
+beliebigen Sprache stehen (deutsch oder englisch zum Beispiel). Auch
+Namenslisten (menschliche Vornamen, Firmennamen, etc.) werden oft als
+Grundlage benutzt.
+
+\subsubsection*{Und wie w"ahle ich nun mein Pa"swort?}
+
+In der letzten Frage wurde gekl"art, welche Zeichenketten nicht als Pa"sw"orter
+benutzt werden sollen (Echte deutsche oder englische W"orter, Eigennamen,
+Firmennamen usw). Es gibt mehrere Regeln, die ein Pa"swort gegen"uber den
+"ublichen Attacken praktisch immun machen: 
+
+\begin{enumerate}
+  \item Gro"s- und Kleinschreibung gemischt verwenden (wird unterschieden)
+  \item Zahlen mit einbauen
+  \item Sonderzeichen mit einbauen (allerdings keine speziellen deutschen
+    Sonderzeichen, siehe oben)
+  \item Pa"swort nicht zu kurz w"ahlen (8 Zeichen sind optimal) 
+\end{enumerate}
+
+Als n"achstes stellt sich m"oglicherweise die Frage, wie man sich ein solches
+sicheres Pa"swort noch merken k"onnen soll. Es gibt verschiedene Eselsbr"ucken
+und der Phantasie sind keine Grenzen gesetzt. Eine M"oglichkeit: Man nimmt sich
+eine Zeile aus seinem Lieblingsgedicht, -song, oder was auch immer und greift
+sich die Anfangsbuchstaben heraus. Aus "`We don't need no Education"' ergibt
+sich beispielsweise das Pa"swort "`WdnnE"' --- leicht zu merken und schwer zu
+erraten bzw.\  zu knacken.
