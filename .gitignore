@@ -2,7 +2,6 @@
 *~
 *.~ml
 #documentation
-*.pdf
 !./etc/doc/bilder/
 ./etc/vp-uml/.vpp~*
 ./etc/vp-uml/.vpprefdata/
