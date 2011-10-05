@@ -1,15 +1,16 @@
 
 \subsection{Netzwerkkarte und MAC--Adresse}
 \label{sec:netzw-und-mac}
-In jedem Zimmer befindet sich eine Anschlussdose, in Haus 3 "uber der Pinwand
-neben der Kofferklappe. In Haus 1 und Haus 2 findet man die Dose bei
-den anderen Steckdosen. 
+In jedem Zimmer befindet sich eine Anschlussdose, üblicherweise bei
+in der Nähe der Steckdosen und des Fernsehanschlusses.
 \rm Zum Anschluss ist ein Netzwerkadapter (Ethernet--Karte) mit RJ45--Buch\-se und
 ein Anschlusskabel (Twisted Pair, RJ45, \textbf{nicht} crossed over) der
 ben"otigten L"ange erforderlich. Es  kann, falls nicht schon
 vorhanden, in der \glossar Sprechstunder des SchunterNet erworben werden.
-Die Bandbreite der Netzkarte bzw.\  der Netzanbindung kann 10~MBit/s (10BaseT) oder 100~MBit/s (100BaseT) betragen. Macs haben seit 1999 10/100BaseT Ethernet eingebaut, das gilt auch
-f"ur iMacs/iBooks/PowerBooks.
+Die Bandbreite der Netzkarte bzw.\  der Netzanbindung kann 10~MBit/s
+(10BaseT) oder 100~MBit/s (100BaseT) betragen. 
+%Macs haben seit 1999 10/100BaseT Ethernet eingebaut, das gilt auch
+%f"ur iMacs/iBooks/PowerBooks.
 
 Jede Ethernet--Karte bzw.\ --Chip hat eine weltweit eindeutige Hardware--(oder
 \glossar MAC--)Adresse, die fest in der Karte eingestellt ist. Bei "alteren
@@ -26,7 +27,6 @@ Je nach Betriebssystem gibt es mehrere Möglichkeiten, die MAC-Adresse
 herauszufinden.
 \newpage
 \subsubsection*{Windows XP}
-
 Unter Windows XP wählt man \fbox{Startmenü} $\Rightarrow$
 \fbox{Ausführen}.  In das sich öffnende Fenster tippt man  \texttt{cmd}
 ein und bestätigt dies durch einen Klick auf \fbox{Ok}:
@@ -39,30 +39,53 @@ Nun muss man aufpassen, dass man nicht die falsche MAC-Adresse, z.B
 der WLAN-Karte erwischt. Gesucht wird die der Ethernetkarte. Im
 Screenshot wäre dies zum Beispiel der \texttt{,,Ethernetadapter LAN-Verbindung
 2''}. Die MAC-Adresse selbst verbirgt sich hinter der psysikalischen
-Adresse, hier also: \texttt{,,0B-00-27-FC-09-51''}.
+Adresse, hier also: \texttt{,,0B-00-27-FC-09-51''}.%\newpage
+%
 \subsubsection*{Windows Vista/7}
+ \begin{minipage}{0.9\linewidth}
 Unter Windows Vista und Windows7 wählt man \fbox{Startmenü} und gibt in das Suchfeld 
- \texttt{cmd} ein. In den Ergebnissen wählt man dann die \texttt{cmd.exe} aus:
-\centergraphics[width=\textwidth]{bilder/win7start}
- In die sich
-nun öffnende Eingabeaufforderung gibt man den Befehl \texttt{ipconfig /all}
+ \texttt{cmd} ein. In den Ergebnissen wählt man dann die
+ \texttt{cmd.exe} aus:
+ %\ \\
+
+\centergraphics[width=0.8\textwidth]{bilder/win7start}  %\end{figure}
+
+%\begin{minipage}{1.0\linewidth}
+%\end{minipage}
+ In die sich nun öffnende Eingabeaufforderung gibt man den Befehl \texttt{ipconfig /all}
 ein: %Illustrierende Bilder
-\centergraphics{bilder/mac_7}
+ %\begin{minipage}{1.0\linewidth}
+\centergraphics[width=0.8\linewidth]
+{bilder/mac_7}
+\end{minipage}\newpage%\ \\ \\
 Nun muss man aufpassen, dass man nicht die falsche MAC-Adresse, z.B
 der WLAN-Karte erwischt. Gesucht wird die der Ethernetkarte. Im
 Screenshot wäre dies zum Beispiel der \texttt{,,Ethernetadapter Local Area Connection''}. 
 Die MAC-Adresse selbst verbirgt sich hinter der psysikalischen
 Adresse, hier %also: \texttt{,,0B-00-27-FC-09-51''}.
-also: \texttt{,, 00:15:58:ce:53:14''}. 
+also: \texttt{,, 00:15:58:ce:53:14''}.
+%\end{minipage}
+%\hfill 
+%\newpage
 %In die sich nun öffnende Eingabeaufforderung gibt man den Befehl 
 % Leute wegen Screenshots nerven
 % ggf. in der Uni machen?
-%\subsubsection*{Mac OS}
+\subsubsection*{Mac OS X}
 % dito
 % In einer \glossar Sprechstunde sah ich, wie eine Benutzerin die MAC über den
 % Apple System Profiler herausfand, würde das gerne mal anhand des
 % Minis nachvollziehen und fotografisch aufbereiten :)
-%Unter MacOS X kann die MAC-Adresse mit den ,,Apple System Profiler''
+%\begin{minipage}{1.0\linewidth}
+Unter MacOS X kann die MAC-Adresse wie folgt ermittelt werden:\\
+Man öffnet zunächst im \fbox{Apfel-Menü} die \fbox{Systemeinstellungen} und dadrin
+\fbox{Netzwerk}.  Hier sucht man nun nach der Netzwerkkarte,
+üblicherweise \fbox{Ethernet (integriert)}  und klickt dadrin dann auf
+\fbox{Weitere Optionen}. Dort wählt man dann den Reiter
+\fbox{Ethernet}. Die dort angezeigte Ethernet-ID ist die gesuchte
+MAC-Adresse.
+
+%\end{minipage}
+%mit den ,,Apple System Profiler''
 %ermittelt werden: %screenshot mini
 %Unter älteren Systemen (Mac OS 9.22 und dessen Vorgänger) kann 
 %die MAC--Adresse ermittelt werden, indem man das
@@ -72,6 +95,7 @@ also: \texttt{,, 00:15:58:ce:53:14''}.
 %werden. 
 \newpage
 \subsubsection*{Unix/Linux}
+%\begin{minipage}{1.0\linewidth}
 \small{Vorbemerkung: Je nach Distribution kann es kleinere Unterschiede
 geben. Die folgende Anleitung wurde für Debian und Ubuntu getestet und
 sollte sich leicht an andere Distributionen anpassen lassen.} Unter
@@ -86,6 +110,7 @@ Gesucht ist die MAC-Adresse der Ethernetkarte. Diese fängt zumeist mit
 ,,eth'' an, hier also ,,eth1''.  Davon ist nun die MAC-Adresse
 gesucht, auch ,,HWAddr'' oder ,,Hardwareadresse'' genannt, hier
 also: \texttt{,, 00:15:58:ce:53:14''}. 
+%\end{minipage}
 
 %%% Local Variables: 
 %%% mode: latex

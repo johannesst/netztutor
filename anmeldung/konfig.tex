@@ -10,9 +10,9 @@ Betriebssysteme im Folgenden beschrieben.
 Man klickt sich durch  über \fbox{Startmenü} $\Rightarrow$
 \fbox{Einstellungen} $\Rightarrow$ \fbox{Systemsteuerung} zum Fenster
 \fbox{Netzwerkverbindungen} durch:
-\centergraphics{bilder/netzwerkverbindungen}
+\centergraphics[width=\linewidth]{bilder/netzwerkverbindungen}
 %insert screenshot
-Hier ist nun die richtige Netzwerkverbindung auszuwählen. Wie man sie
+Hier ist nun die richtige Netzwerkverbindung, hier ,,LAN-Verbindung 2'' auszuwählen. Wie man sie
 ermittelt, wird im Abschnitt zur MAC-Adresse beschrieben. Zunächst
 sollte man ihren Status überprüfen:  Die Netzwerkverbindung muss
 aktiviert sein. Andernfalls muss sie mittels
@@ -20,20 +20,22 @@ aktiviert sein. Andernfalls muss sie mittels
 werden.  Anschließend ruft man mit
 \fbox{Rechtsklick}$\Rightarrow$\fbox{Eigenschaften} das linke Fenster auf:  
 \begin{center}
-\includegraphics{bilder/eigenschaften_xp}
-\includegraphics{bilder/dhcp_xp}    
+\includegraphics[width=0.48\linewidth]{bilder/eigenschaften_xp}
+%\centergraphics[width=\textwdith]{bilder/eigenschaften_xp}
+\includegraphics[width=0.48\linewidth]{bilder/dhcp_xp}    
 \end{center}
  
 
 Hier ist nun auf \fbox{Internetprotokoll (TCP/IP)} und anschließend
 auf \fbox{Eigenschaften} zu klicken. Es sollte sich das rechte Fenster
-öffnen.
+öffnen. 
 %und noch einer
 Die Einstellungen sollten mit den abgebildeten
-übereinstimmen. Andersweitig sind sie zu ändern und mit einen
-beherzten Klick auf \fbox{Ok} zu bestätigen. Damit sollte dann in der
+übereinstimmen. Dazu muss man auf ,,IP-Adresse automatisch beziehen''
+klicken, sowie auf ,,DNS-Serveradresse automatisch beziehen''. Dies
+bestätigt man danach mit einen beherzten Klick auf \fbox{Ok} zu bestätigen. Damit sollte dann in der
 Tat alles ok sein.
-\subsubsection{Windows Vista/ 7}
+%\subsubsection{Windows Vista/ 7}
 
 \subsubsection{Linux}
 \small{Wie schon bei der MAC-Adresse gilt: Je nach Distribution kann es kleinere Unterschiede
@@ -97,7 +99,9 @@ Können alle diese Fehler ausgeschlossen werden,  sollte man natürlich sich nic
 %natürlich ist die Sprechstunde kein Selbstzweck, sondern durchaus
 %dafür da, Probleme anzusprechen und dann auch zu lösen :)
 %
+
+
 %%% Local Variables: 
 %%% mode: latex
-%%% TeX-master: "Netzeinfuehrung"
+%%% TeX-master: "../Netzeinfuehrung"
 %%% End: 

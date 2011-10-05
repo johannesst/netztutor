@@ -91,9 +91,12 @@
 \title{\includegraphics[width=8cm]{bilder/logo}\\[2cm]
 Einf"uhrung in die Nutzung des\\[5mm]
 \bigbold SchunterNet\\[5mm]
-\normalsize 3. "uberarbeitete Auflage -- Oktober 2009 \vspace{3.3cm}}
+\normalsize 3. "uberarbeitete Auflage -- Oktober 2011 \vspace{3.3cm}}
 
-\date{\small \sf SchunterNet e.V. \quad Braunschweig\\ \small \sf Bienroder Weg 54 \hfill 38108 Braunschweig \hfill Telefon/Fax: (0531) 2\,35\,14\,59 \hfill www.schunternet.de}
+\date{\small \sf SchunterNet e.V. \quad Braunschweig\\ \small \sf
+  Bienroder Weg 54 \hfill 38108 Braunschweig 
+%\hfill  Telefon/Fax: (0531) 2\,35\,14\,59
+ \hfill www.schunternet.de}
 \author{}
 
 \uppertitleback{\small \glossar\ \dots\ Erl"auterung im Glossar
@@ -105,19 +108,19 @@ Windows 7 sind eingetragene Warenzeichen der
     Warenzeichen.}
 \lowertitleback{\small \textbf{Impressum:}
 
-Herausgeber: \parbox[t]{8cm}{SchunterNet e.V.\\ Bienroder Weg 54\\ 38108
+Herausgeber: \hspace{0.3cm} \parbox[t]{\textwidth}{SchunterNet e.V.\\ Bienroder Weg 54\\ 38108
   Braunschweig}
-
-Autoren: \parbox[t]{\textwidth-15.6mm}{Ronny Heidenreich, Uwe Gre"shake unter
+\\\\
+Autoren: \hspace{1cm} \parbox[t]{\textwidth-15mm}{Ronny Heidenreich, Uwe Gre"shake unter
   Verwendung der "`Wohnheimnetz FAQ"' des Studentenwohnheimes Sch"utzenweg 42
-  in Oldenburg (\url{http://www.Fortytwo.Uni-Oldenburg.de/~waterman/FAQ/})
+  in Oldenburg% (\url{http://www.Fortytwo.Uni-Oldenburg.de/~waterman/FAQ/})
   sowie der "`Technischen Hinweise f"ur Informationsanbieter im World Wide
-  Web"' des Rechenzentrums der Technischen Universit"at Braunschweig
-  (\url{http://www.tu-bs.de/www/techn_hinweise/})\\
+  Web"' des Rechenzentrums der Technischen Universit"at Braunschweig\\
+%  (\url{http://www.tu-bs.de/www/techn_hinweise/})\\
   Dank an Andreas L"ubbecke f"ur zahlreiche Korrekturen und Erg"anzungen sowie
   an Oliver B"ohnke f"ur die Informationen zum Macintosh.\\
   Aktualisiert und neugeschrieben von Alexander Riemer und Johannes Starosta
-  }
+  }\\
 
 Satz: \LaTeX}
 
@@ -126,7 +129,7 @@ Satz: \LaTeX}
 \thispagestyle{empty}
 
 \tableofcontents
-
+ 
 \clearpage
 
 \section{Der Verein SchunterNet e.V.}
@@ -144,10 +147,16 @@ ist auch die Funkanbindung an das Rechenzentrum funktionsf"ahig und das
 \emph{SchunterNet} offiziell in Betrieb. Im Sommersemester 1999 wurden
 schlie"slich auch die "ubrigen Geb"aude an das Netzwerk angeschlossen.
 
+Während der Renovierung der drei Hochhäuser des Wohnheims in den
+Jahren 2006 bis 2010 wurden auch sämtliche Netzleitungen in den
+Häusern erneuert. \\
 Der \snev betreibt das Netz, stellt die \glossar Systemadministration und
 verwaltet die Teilnehmerdaten.
 
-W"ochentlich wird eine \glossar Sprechstunde im Clubhaus angeboten. Hier k"onnen Probleme beim Netzbetrieb besprochen oder der Netzantrag abgeholt und eingereicht werden. Mindestens zweimal j"ahrlich findet zudem eine Mitgliederversammlung
+W"ochentlich wird eine \glossar Sprechstunde im Clubhaus
+angeboten. Hier k"onnen Probleme beim Netzbetrieb besprochen oder der
+Netzantrag abgeholt und eingereicht werden. Sie findet derzeit jeden
+Montag von 19:00 Uhr bis 19:30 Uhr statt. Mindestens zweimal j"ahrlich findet zudem eine Mitgliederversammlung
 statt.
 
 Da all dies von den Bewohnern neben ihrem Studium erledigt wird und die zu
@@ -163,7 +172,7 @@ Zukunft auch nicht weiter betrieben werden kann.
 \section{Anmeldung und Netzanschluss}
 \input{anmeldung/nutzervertrag}
 \input{anmeldung/netzwerk_mac}
-\input{anmeldung/manuell}
+%\input{anmeldung/manuell}
 \input{anmeldung/ip}  
 \input{anmeldung/kosten}
 \input{anmeldung/konfig}
@@ -172,13 +181,16 @@ Zukunft auch nicht weiter betrieben werden kann.
 \newpage
 
 \section{Netzdienste}
+\input{dienste/kennung}
+\input{dienste/benutzerserver}
 \input{dienste/email}
 \input{dienste/www}
-%\input{dienste/usenet}  
-%\input{dienste/icq}
-\input{dienste/benutzerserver}
+\input{dienste/usenet}  
+\input{dienste/jabber}
+
 \newpage
 \section{Sicherheit}
+\input{sicherheit/allgemeines}
 \input{sicherheit/viren}
 \input{sicherheit/passwort}
 % \subsection{ssh --- Die Secure Shell}
