@@ -8,20 +8,39 @@ Um die Merkbarkeit zu vereinfachen, wird au"serdem ein Mail--Alias der Form
 \url{Vorname.Nachname@schunter.etc.tu-bs.de} eingerichtet. Umlaute werden zu
 ae, oe, ue usw.  Standardmäßig werden die Emails an die bei der
 Anmeldung angegbene Emailadresse gesendet. Möchte man diese Adresse
-ändern, ist die Datei \texttt{.forward} auf den Benutzerserver zu bearbeiten.
-Möchte man den Zugang über das SchunterNet nutzen, ist sie zu entfernen.
-Mehr Informationen zum Arbeiten auf den Benutzerserver unter
-\ref{benutzerserver} auf \pageref{benutzerserver}.\\\\
+ändern, ist die Datei \texttt{.forward} auf den Benutzerserver zu
+bearbeiten. Nähere Informationen zum Benutzerserver finden sich auf
+Seite \pageref{benutzerserver}. W
+Möchte man den Zugang über das SchunterNet nutzen, ist die Datei \texttt{.forward} zu
+entfernen.
+Weiß man nicht, wie man bei der Änderung/Entfernung vorgehen 
+muss, kann man auch in der \glossar Sprechstunde die Emailadresse
+helfen lassen.\\
+Mehr Informationen zum Arbeiten auf den Benutzerserver %unter
+%\ref{benutzerserver} 
+findet man auf Seite \pageref{benutzerserver}.\\\\
 Zum Senden und Empfangen von E-Mail im SchunterNet sind nach Entfernen
 der \texttt{.forward} noch einige Einstellungen notwendig. Dazu geht man z.B. unter
-Thunderbird wie folgt vor:
-
+Thunderbird wie folgt vor:\\
+Zum Einrichten eines POP3-Kontos:\\
 \fbox{Bearbeiten} $\Rightarrow$ \fbox{Einstellungen} $\Rightarrow$
 \fbox{Konten} $\Rightarrow$ \fbox{Konto hinzufügen:} $\Rightarrow$
 \mbox{E-Mail-Konto} $\Rightarrow$ \fbox{E-Mail-Adresse}
-\mbox{\url{Vorname.Nachname@schunternet.de}} $\Rightarrow$ \fbox{POP|IMAP}
+\mbox{\url{Vorname.Nachname@schunternet.de}} $\Rightarrow$ \fbox{POP}
 $\Rightarrow$ \fbox{Posteingang-Server}
-\mbox{\url{pop.schunter.etc.tu-bs.de | imap.schunter.etc.tu-bs.de}}
+\mbox{\url{pop.schunter.etc.tu-bs.de}}
+$\Rightarrow$ \fbox{Postausgang-Server (SMTP)}
+\mbox{\url{mail.schunter.etc.tu-bs.de}} $\Rightarrow$ \fbox{Benutzername}
+\mbox{\url{loginname@schunter.etc.tu-bs.de}}\\
+\\
+
+Zum Einrichten eines IMAP-Kontos:\\
+\fbox{Bearbeiten} $\Rightarrow$ \fbox{Einstellungen} $\Rightarrow$
+\fbox{Konten} $\Rightarrow$ \fbox{Konto hinzufügen:} $\Rightarrow$
+\mbox{E-Mail-Konto} $\Rightarrow$ \fbox{E-Mail-Adresse}
+\mbox{\url{Vorname.Nachname@schunternet.de}} $\Rightarrow$ \fbox{IMAP}
+$\Rightarrow$ \fbox{Posteingang-Server}
+\mbox{\url{imap.schunter.etc.tu-bs.de}}
 $\Rightarrow$ \fbox{Postausgang-Server (SMTP)}
 \mbox{\url{mail.schunter.etc.tu-bs.de}} $\Rightarrow$ \fbox{Benutzername}
 \mbox{\url{loginname@schunter.etc.tu-bs.de}}\\
@@ -32,61 +51,66 @@ Ordnerstruktur. Auf diese kann dann auch via Webmail unter
 Nun muss man noch eine Kontobezeichnung wählen und auf ,,Fertig
 stellen'' klicken. Danach kann dann das Emailprogramm genutzt werden.
 Bei anderen Emailprogrammen ist die Einrichtung ähnlich. 
-Zur Sicherheit bei Email sieh auch noch \ref{viren} und \ref{passwort}.
+Zur Sicherheit bei Email siehe auch noch \ref{viren} und \ref{passwort}.
 
+%@
+% \subsubsection*{Wie komme ich an meine E-Mail in der Uni?}
 
-\subsubsection*{Wie komme ich an meine E-Mail in der Uni?}
+% Mehrere E-Mail--Adressen bei verschiedenen Service--Providern zu haben, ist
+% keine Seltenheit mehr. Daraus erw"achst die Frage, wie es m"oglich ist, alle
+% \glossar E-Mails von einem einzigen Arbeitsplatz aus abzurufen und zu
+% bearbeiten. Dabei gibt es grunds"atzlich zwei Strategien. 
 
-Mehrere E-Mail--Adressen bei verschiedenen Service--Providern zu haben, ist
-keine Seltenheit mehr. Daraus erw"achst die Frage, wie es m"oglich ist, alle
-\glossar E-Mails von einem einzigen Arbeitsplatz aus abzurufen und zu
-bearbeiten. Dabei gibt es grunds"atzlich zwei Strategien. 
+% \begin{enumerate}
+%   \item S"amtliche \glossar E-Mail wird zun"achst automatisch an eine einzige
+%     Adresse weitergeleitet und auf dem empfangenden \glossar Server gesammelt
+%     zwischengelagert. Von dort kann sie auf einmal abgerufen werden. 
+%   \item Die \glossar E-Mail bleibt auf dem\glossar  Server, der zu der
+%     jeweiligen Adresse geh"ort. Der Arbeitsplatzrechner muss dann immer von
+%     mehreren \glossar Servern die \glossar E-Mail abholen.
+% \end{enumerate} 
 
-\begin{enumerate}
-  \item S"amtliche \glossar E-Mail wird zun"achst automatisch an eine einzige
-    Adresse weitergeleitet und auf dem empfangenden \glossar Server gesammelt
-    zwischengelagert. Von dort kann sie auf einmal abgerufen werden. 
-  \item Die \glossar E-Mail bleibt auf dem\glossar  Server, der zu der
-    jeweiligen Adresse geh"ort. Der Arbeitsplatzrechner muss dann immer von
-    mehreren \glossar Servern die \glossar E-Mail abholen.
-\end{enumerate} 
+% Die erste Methode kann dadurch eingeschr"ankt werden, da"s man als normaler
+% Benutzer nicht auf allen \glossar Serversystemen die M"oglichkeit hat, eine
+% automatische Weiterleitung der \glossar E-Mail zu veranlassen. Die zweite
+% M"oglichkeit bereitet Probleme, wenn die Software auf dem Arbeitsplatzrechner
+% nicht darauf ausgerichtet ist, von mehr als einem \glossar Server \glossar
+% E-Mail abzurufen. Folgende Beispiele sollen helfen, das richtige Verfahren zu
+% w"ahlen. Die Mail--Adresse im Wohnheim sei \url{loginname@schunter.etc.tu-bs.de}.
 
-Die erste Methode kann dadurch eingeschr"ankt werden, da"s man als normaler
-Benutzer nicht auf allen \glossar Serversystemen die M"oglichkeit hat, eine
-automatische Weiterleitung der \glossar E-Mail zu veranlassen. Die zweite
-M"oglichkeit bereitet Probleme, wenn die Software auf dem Arbeitsplatzrechner
-nicht darauf ausgerichtet ist, von mehr als einem \glossar Server \glossar
-E-Mail abzurufen. Folgende Beispiele sollen helfen, das richtige Verfahren zu
-w"ahlen. Die Mail--Adresse im Wohnheim sei \url{loginname@schunter.etc.tu-bs.de}.
+% \paragraph*{Forwarding ins Wohnheim (1.Strategie)}
 
-\paragraph*{Forwarding ins Wohnheim (1.Strategie)}
+% %Angenommen, es besteht ein zweiter \glossar Account auf den \glossar
+% %UNIX--Systemen im Hochschulnetz (Institute etc.). Dann kann auf den dortigen
+% %\glossar UNIX--Systemen eine Datei mit Namen "`\path{.forward}"' angelegt
+% %werden, die die Adresse im Wohnheim enth"alt (z.B. mit dem Kommando: \texttt{\#
+% %  echo \url{loginname@schunter.etc.tu-bs.de} > .forward}). S"amtliche \glossar E-Mail
+% %an die Hochschul--Adresse wird dann an das Wohnheim weitergeleitet und kann
+% %dort zusammen mit der restlichen \glossar E-Mail abgerufen werden. Leider
+% %funktioniert das seit der Umstellung auf das Filesystem afs im Rechenzentrum
+% %nicht mehr.
 
-%Angenommen, es besteht ein zweiter \glossar Account auf den \glossar
-%UNIX--Systemen im Hochschulnetz (Institute etc.). Dann kann auf den dortigen
-%\glossar UNIX--Systemen eine Datei mit Namen "`\path{.forward}"' angelegt
-%werden, die die Adresse im Wohnheim enth"alt (z.B. mit dem Kommando: \texttt{\#
-%  echo \url{loginname@schunter.etc.tu-bs.de} > .forward}). S"amtliche \glossar E-Mail
-%an die Hochschul--Adresse wird dann an das Wohnheim weitergeleitet und kann
-%dort zusammen mit der restlichen \glossar E-Mail abgerufen werden. Leider
-%funktioniert das seit der Umstellung auf das Filesystem afs im Rechenzentrum
-%nicht mehr.
+% Der an der TU vergebene Mailalias der Form \url{V.Nachname@tu-bs.de} kann
+% direkt auf den Wohnheimserver umgeleitet werden. Dies kann jeder "uber den
+% Benutzerdatendienst des IT--Zentrums der TU--Braunschweig
+% (\url{https://www2.tu-bs.de/it/services/benutzer/bdd}) selbst erledigen.
 
-Der an der TU vergebene Mailalias der Form \url{V.Nachname@tu-bs.de} kann
-direkt auf den Wohnheimserver umgeleitet werden. Dies kann jeder "uber den
-Benutzerdatendienst des IT--Zentrums der TU--Braunschweig
-(\url{https://www2.tu-bs.de/it/services/benutzer/bdd}) selbst erledigen.
+% Zun"achst meldet man sich "uber den Link "`LOGIN"' mit dem RZ--login
+% ("ublicherweise eine y--Nummer) an. Dann f"uhrt ein Klick auf den gelben
+% Button im Feld "`Mailbox"' zu einem "Anderungsformular f"ur die
+% Mailadresse. Dort wird z.B. die Mail--Adresse
+% "`\url{loginname@schunter.etc.tu-bs.de}"' eingegeben und mit \fbox{abschicken}
+% best"atigt.
 
-Zun"achst meldet man sich "uber den Link "`LOGIN"' mit dem RZ--login
-("ublicherweise eine y--Nummer) an. Dann f"uhrt ein Klick auf den gelben
-Button im Feld "`Mailbox"' zu einem "Anderungsformular f"ur die
-Mailadresse. Dort wird z.B. die Mail--Adresse
-"`\url{loginname@schunter.etc.tu-bs.de}"' eingegeben und mit \fbox{abschicken}
-best"atigt.
+% \paragraph*{Abruf von mehreren Servern (2. Strategie)}
 
-\paragraph*{Abruf von mehreren Servern (2. Strategie)}
+% Hier bleibt die Organisation ganz dem Arbeitsplatzrechner "uberlassen. Die
+% jeweilige Mail--Software muss so eingestellt werden, da"s von allen
+% Mail--Servern, bei denen ein Zugang besteht, die \glossar E-Mail abgeholt
+% wird. Zu jedem Mail--Zugang geh"ort ein POP3--Server mit Benutzerkennung und
+% Pa"swort. Nicht jedes Mail--Programm bietet diese M"oglichkeit.
 
-Hier bleibt die Organisation ganz dem Arbeitsplatzrechner "uberlassen. Die
-jeweilige Mail--Software muss so eingestellt werden, da"s von allen
-Mail--Servern, bei denen ein Zugang besteht, die \glossar E-Mail abgeholt
-wird. Zu jedem Mail--Zugang geh"ort ein POP3--Server mit Benutzerkennung und
-Pa"swort. Nicht jedes Mail--Programm bietet diese M"oglichkeit.
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "../Netzeinfuehrung"
+%%% End: 

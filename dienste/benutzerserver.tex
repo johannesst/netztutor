@@ -1,11 +1,50 @@
 
 \subsection{Benutzerserver (\texttt{jupiter.schunter.etc.tu-bs.de})}
 \label{benutzerserver}
-\subsubsection{Zugriff auf das Homedirectory}
+Bei der Anmeldung erhält jeder Benutzer ein Konto auf dem
+Benutzerserver ,,jupiter''. Betriebssystem ist ein Debian Linux. Man
+kann dort entweder in der Linux-Umgebung arbeiten, oder Dateien via
+ftp/ oder sftp hochladen. Die einzelnen Möglichkeiten werden in
+Folgenden beschrieben:
+
+
+\subsubsection{Einloggen auf dem Server} \ \\ 
+Mit ssh  kann man sich direkt auf dem \glossar Server (Name: "`jupiter.schunter.etc.tu-bs.de"')
+einloggen und in einer \glossar UNIX--Shell--Umgebung (bash) arbeiten. Als
+Texteditoren stehen z.B. vi (bzw.\  vim, elvis) und joe sowie emacs zur
+Verf"ugung. Um sich mit den Server zu verbinden, muss zun"achst ein Terminalprogramm gestartet werden,
+z.B. \glossar ssh oder \glossar putty. Als Zieladresse wird der Rechner jupiter.schunter.etc.tu-bs.de angegeben
+(IP--Adresse ist 134.169.168.3, falls der \glossar DNS--Server nicht benutzt
+werden kann).
+\begin{verbatim}
+Login:
+Password: 
+\end{verbatim}
+Es folgt die Eingabe der Benutzerkennung und des Pa"sworts. Bei der
+Eingabe des Pa"sworts erfolgt kein Echo auf dem Bildschirm, auch nicht
+symbolisch (z.B. durch *). Danach erscheint folgende (oder eine "ahnliche)
+Meldung:
+\begin{verbatim}
+Linux jupiter.schunter.etc.tu-bs.de 2.6.32-jupiter #1 SMP Sat Dec 12 00:42:27 CET 2009 x86_64
+
+Willkommen auf dem neuen Jupiter !
+
+Wichtigste Neuerung : Die Mails werden fortan im Maildir-Format
+abgelegt, siehe Maildir/ Ordner im Homeverzeichnis.
+
+Last login: Thu Mar 20 15:30:06 on ttyp1 from erde.schunter.et
+No mail.
+loginname@jupiter:/home/users/loginname >
+\end{verbatim}
+
+Man befindet sich nun in einer \glossar UNIX--Shell--Umgebung und kann
+dort alle installieren Unix-Tools nutzen.
+
+\subsubsection{Dateiupload auf das Homedirectory}
 
 Wie so oft gibt es auch hier mehrere M"oglichkeiten: 
 
-\paragraph{\dots\ per ftp (File Transfer Protocol)} \ \\
+\paragraph{\dots\ per  ftp (File Transfer Protocol)} \ \\
 Mit einem beliebigen \glossar ftp--Programm k"onnen Dateien in das
 \glossar Home--Directory eingespielt werden. Auch die meisten anderen
 Dateioperationen wie L"oschen, Verzeichnisse anlegen usw.\  k"onnen im
@@ -31,15 +70,6 @@ verbunden. Je nach verwenden System kann die Url auch
 \url{ssh:/login@jupiter.schunter.etc.tu-bs.de/} lauten. 
 Für Windows empfiehlt sich als Client das kostenlose Programm WinSCP
 und für Mac OS X gibt es unter anderen Cyberduck. 
-
-\paragraph{\dots\ durch Einloggen auf dem Server} \ \\ 
-Mit ssh  kann man sich direkt auf dem \glossar Server (Name: "`jupiter.schunter.etc.tu-bs.de"')
-einloggen und in einer \glossar UNIX--Shell--Umgebung (bash) arbeiten. Als
-Texteditoren stehen z.B. vi (bzw.\  vim, elvis) und joe sowie emacs zur
-Verf"ugung. Allerdings wollen wir aus Sicherheitsgründen diese
-Funktionalität bald einschränken, dass neue Benutzer zunächst sich nur
-via scp/sftp verbinden können. Auf Anfrage wird man allerdings einen
-vollwertigen Zugriff erreichen können
 
 %scheint derzeit nicht zu gehen, aber der samba server läuft noch starjoha
 %\subsubsection{\dots\ per SMB--Mount} 
@@ -86,7 +116,7 @@ vollwertigen Zugriff erreichen können
 
 
 \subsubsection{Private Homepages}
-
+\label{wwwprivate}
 Jeder Benutzer kann in seinem HOME--Bereich auf dem Benutzerserver ein
 Unterverzeichnis mit dem Namen \path{public_html} anlegen (auf  
 \url{jupiter.schunter.etc.tu-bs.de} sollte dieses bereits existieren), das der

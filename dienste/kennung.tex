@@ -1,0 +1,58 @@
+\subsection{Benutzerkennung und Passwort}
+Bei der Anmeldung erhält man neben der Benutzerkennung auch ein
+zufallbasiertes Passwort. Es wird benötigt, um auf die Serverdienste
+des Netzes zuzugreifen. Allerdings sind unsere automatisch vergebenen
+Passwörter nicht gerade einfach zu merken, daher folgt nun eine
+Anleitung zum Ändern desselbigen. 
+\subsubsection*{Wie "andere ich das Pa"swort?}
+
+Um das Pa"swort zu "andern, muss zun"achst ein Terminalprogramm gestartet werden,
+z.B. \glossar ssh oder \glossar putty. Als Zieladresse wird der Rechner jupiter.schunter.etc.tu-bs.de angegeben
+(IP--Adresse ist 134.169.168.3, falls der \glossar DNS--Server nicht benutzt
+werden kann). Man erh"alt dann folgende (oder "ahnliche) Begr"u"sungsmeldung: 
+
+\begin{verbatim}
+Login:
+Password: 
+\end{verbatim}
+Es folgt die Eingabe der Benutzerkennung und des (alten) Pa"sworts. Bei der
+Eingabe des Pa"sworts erfolgt kein Echo auf dem Bildschirm, auch nicht
+symbolisch (z.B. durch *). Danach erscheint folgende (oder eine "ahnliche)
+Meldung:
+\begin{verbatim}
+Linux jupiter.schunter.etc.tu-bs.de 2.6.32-jupiter #1 SMP Sat Dec 12 00:42:27 CET 2009 x86_64
+
+Willkommen auf dem neuen Jupiter !
+
+Wichtigste Neuerung : Die Mails werden fortan im Maildir-Format
+abgelegt, siehe Maildir/ Ordner im Homeverzeichnis.
+
+Last login: Thu Mar 20 15:30:06 on ttyp1 from erde.schunter.et
+No mail.
+loginname@jupiter:/home/users/loginname >
+\end{verbatim}
+
+Man befindet sich nun in einer \glossar UNIX--Shell--Umgebung. Zum "Andern des
+Pa"sworts reicht es, das Kommando \verb#kpasswd# zu kennen. Nach dessen Aufruf
+wird man zun"achst nach dem alten, und dann zweimal nach dem neuen Pa"swort
+gefragt. Falls bei der Frage nach dem neuen Pa"swort zwei unterschiedliche
+Zeichenketten angegeben wurden (Tippfehler), erscheint die Meldung
+
+\verb#They don't match; try again.#
+
+und man darf noch mal ein neues Pa"swort angeben (wiederum zweimal). Wichtig:
+In der \glossar UNIX--Welt wird grunds"atzlich zwischen Gro"s- und
+Kleinschreibung unterschieden, also auch beim Pa"swort. Wenn alles geklappt
+hat, kann man die Umgebung mit dem Kommando \verb#exit# wieder verlassen. Auf
+spezielle deutsche Sonderzeichen (Umlaute und Esszett) sollte beim Pa"swort
+verzichtet werden. Auch wenn die \glossar UNIX--Anmeldung und das \glossar
+E-Mail abholen noch klappt, so gibt es doch sp"atestens bei \glossar
+SMB--Zugriffen (\glossar Homedirectory abbilden, Drucken "ubers Netz)
+Schwierigkeiten.\\
+Hinweise zur sicheren Wahl eines Passwortes findet man auf Seite
+\pageref{passwort}.
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "../Netzeinfuehrung"
+%%% End: 
